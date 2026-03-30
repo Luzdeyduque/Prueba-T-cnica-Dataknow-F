@@ -1,0 +1,5 @@
+# terraform.tfvars.example
+project      = "finbank"
+env          = "dev"
+location     = "eastus"
+alert_email  = "tucorreo@finbank.com"
