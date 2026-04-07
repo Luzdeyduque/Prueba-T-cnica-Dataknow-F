@@ -1,0 +1,7 @@
+campo_calculado,tabla_origen,campo_origen,transformacion,proposito
+fact_rentabilidad_cliente.cltv_12m,slv_tb_comisiones_log + slv_tb_obligaciones + slv_tb_productos_cat,vr_comision + sdo_capital * tasa_ea,Suma rolling 12 meses de (ingresos_comisiones_cobradas + ingresos_intereses_estimados) por cliente,Customer Lifetime Value para segmentación comercial y decisiones de oferta
+fact_cartera.provision_estimada,slv_tb_obligaciones,sdo_capital + dias_mora_act,"sdo_capital * porcentaje_regulatorio (A=1%, B=3.2%, C=10%, D=20%, E=50%)",Estimación de provisiones regulatorias exigidas por la Superintendencia Financiera
+fact_transacciones.ind_sospechoso,slv_tb_mov_financieros,vr_mov,True cuando vr_mov > promedio_movil_30d + 3 * desviacion_estandar_30d del mismo cliente,Detectar transacciones atípicas para alimentar el motor de prevención de fraude
+fact_cartera.bucket_mora,slv_tb_obligaciones,dias_mora_act,"CASE: 0='AL_DIA', 1-30='RANGO_1', 31-60='RANGO_2', 61-90='RANGO_3', >90='DETERIORADO'",Clasificar obligaciones en rangos de mora para monitoreo de riesgo crediticio
+dim_productos.tasa_mensual_equiv,slv_tb_productos_cat,tasa_ea,((1 + tasa_ea/100)^(1/12) - 1) * 100,Tasa mensual equivalente para cálculo de intereses mensuales y comparación entre productos
+dim_clientes.edad,slv_tb_clientes_core,fec_nac,"FLOOR(DATEDIFF(current_date, fec_nac) / 365.25)",Edad del cliente para segmentación demográfica y análisis de riesgo por edad
