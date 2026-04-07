@@ -1,0 +1,28 @@
+# Data Generation and Processing Parameters
+
+generation:
+  seed: 42
+  start_date: '2024-03-01'
+  end_date: '2026-03-31'
+  
+table_volumes:
+  TB_CLIENTES_CORE: 10000
+  TB_PRODUCTOS_CAT: 50
+  TB_MOV_FINANCIEROS: 500000
+  TB_OBLIGACIONES: 30000
+  TB_SUCURSALES_RED: 200
+  TB_COMISIONES_LOG: 80000
+
+data_quality:
+  null_percentage: 0.05
+  duplicates_to_inject: 100
+  anomalies_percentage: 0.001
+
+output_formats:
+  - csv
+  - parquet
+  - json
+
+fabric:
+  workspace_name: 'Prueba Tecnica Dataknow'
+  lakehouse_name: 'LH_BRONZE_PRUEBA' 
