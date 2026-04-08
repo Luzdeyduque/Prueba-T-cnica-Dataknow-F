@@ -1,0 +1,4 @@
+fecha_ejecucion,registros_bronze,registros_silver,registros_gold,alertas_calidad,errores_pipeline,estado,_timestamp
+2026-04-07 18:07:50,620350,620250,584910,0,0,COMPLETADO,2026-04-07 18:09:10
+2026-04-07 17:36:24,620350,620250,584910,0,0,COMPLETADO,2026-04-07 17:37:43
+2026-04-07 12:50:12,620350,620250,584910,0,0,COMPLETADO,2026-04-07 12:51:02
