@@ -345,7 +345,7 @@ Ubicación:
 ```
 /docs/DAG EXITOSO.png
 ```
-
+![image alt](https://github.com/Luzdeyduque/Prueba-T-cnica-Dataknow-F/blob/18df73845707ce1ca4978b28f01a2f5a6ae98676/docs/DAG%20EXITOSO.png)
 ---
 
 ## ❌ 3. Evidencia de Alerta de Fallo
@@ -375,6 +375,7 @@ Ubicación:
 ```
 /docs/Resumen_Diario_F.png
 ```
+![image alt](https://github.com/Luzdeyduque/Prueba-T-cnica-Dataknow-F/blob/18df73845707ce1ca4978b28f01a2f5a6ae98676/docs/Resumen_Diario_F.png)
 
 Este reporte contiene:
 
@@ -435,6 +436,8 @@ Se definieron tres roles dentro de la solución con diferentes niveles de acceso
 ```
 /docs/ROLES_ACCESO.jpeg
 ```
+![image alt](https://github.com/Luzdeyduque/Prueba-T-cnica-Dataknow-F/blob/18df73845707ce1ca4978b28f01a2f5a6ae98676/docs/ROLES_ACCESO.jpeg)
+
 
 ### Roles implementados
 
@@ -494,7 +497,7 @@ Debido a limitaciones del SQL Endpoint de Microsoft Fabric, no es posible ejecut
 
 ---
 
-## 🚨 4. Evidencia de Alertas
+## 🚨 3. Evidencia de Alertas
 
 Se validó el funcionamiento de tres tipos de alertas:
 
@@ -507,23 +510,6 @@ Estas evidencias se encuentran documentadas en la carpeta:
 ```
 /docs
 ```
-
----
-
-## 📝 5. Control de Cambios
-
-Se incluye el archivo:
-
-```
-CHANGELOG.md
-```
-
-Este documento contiene:
-
-- Historial de cambios del proyecto  
-- Evolución del pipeline  
-- Mejoras implementadas en cada fase  
-
 ---
 
 ## 📁 Estructura Relacionada
@@ -534,5 +520,4 @@ Este documento contiene:
 ```
 
 ---
-
 
