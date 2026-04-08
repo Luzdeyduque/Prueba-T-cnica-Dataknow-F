@@ -207,7 +207,7 @@ El código completo de las tres capas del pipeline (Bronze, Silver y Gold) se en
 Además, la explicación detallada de cada una de las capas y su funcionamiento está documentada en:
 
 ```
-/pipelines/README.ipynb
+/docs/README.md
 ```
 
 ---
