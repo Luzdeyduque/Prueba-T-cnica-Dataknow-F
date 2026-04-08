@@ -68,7 +68,7 @@ Se diseñó un diagrama ER que representa todas las tablas generadas y sus relac
 ```
 /docs/DIAGRAMA ENTIDAD-RELACIÓN (ER).png
 ```
-![image alt] (https://github.com/Luzdeyduque/Prueba-T-cnica-Dataknow-F/blob/480d41f137f64e9151b7d97544439214ee9950b3/docs/DIAGRAMA%20ENTIDAD-RELACI%C3%93N%20(ER).png)
+![image alt](https://github.com/Luzdeyduque/Prueba-T-cnica-Dataknow-F/blob/480d41f137f64e9151b7d97544439214ee9950b3/docs/DIAGRAMA%20ENTIDADRELACI%C3%93N%20(ER).png)
 ---
 
 ### 4. Evidencia de Carga Exitosa
