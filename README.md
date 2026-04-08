@@ -69,6 +69,7 @@ Se diseñó un diagrama ER que representa todas las tablas generadas y sus relac
 /docs/DIAGRAMA ENTIDAD-RELACIÓN (ER).png
 ```
 ![image alt](https://github.com/Luzdeyduque/Prueba-T-cnica-Dataknow-F/blob/480d41f137f64e9151b7d97544439214ee9950b3/docs/DIAGRAMA%20ENTIDADRELACI%C3%93N%20(ER).png)
+
 ---
 
 ### 4. Evidencia de Carga Exitosa
@@ -175,6 +176,360 @@ Se implementó un archivo independiente para la gestión de variables, lo que pe
 
 /docs
 └── apply exitoso.png
+```
+
+---
+# ⚙️ Entregables Fase 3 — Desarrollo del Pipeline de Datos
+
+---
+
+## 📦 1. Código del Pipeline
+
+El código completo de las tres capas del pipeline (Bronze, Silver y Gold) se encuentra en la carpeta:
+
+```
+/pipelines
+```
+
+Además, la explicación detallada de cada una de las capas y su funcionamiento está documentada en:
+
+```
+/pipelines/README.ipynb
+```
+
+---
+
+## 🥉🥈🥇 Notebooks por Capa
+
+### Bronze
+```
+/pipelines/ingesta_transformacion_log.ipynb
+```
+
+### Silver
+```
+/pipelines/TRANSFORMACION_SILVER.ipynb
+```
+
+### Gold
+```
+/pipelines/TRANSFORMACION_GOLD.ipynb
+```
+
+---
+
+## ⚠️ 2. Tablas de Errores del Pipeline
+
+Se implementaron tablas de errores independientes por cada capa del pipeline, permitiendo trazabilidad y control de fallos.
+
+Ubicación de evidencias:
+
+```
+/docs/tabla de errores bronze.csv
+/docs/tabla de errores silver.csv
+/docs/tabla de errores gold.csv
+```
+
+Cada tabla contiene al menos un registro de prueba que demuestra el correcto funcionamiento del sistema de logging de errores.
+
+---
+
+## 📊 3. Reporte de Calidad de Datos (Silver)
+
+La capa Silver genera un reporte de calidad de datos que incluye métricas de validación en cada ejecución del pipeline.
+
+Este reporte permite:
+
+- Evaluar la calidad de los datos procesados  
+- Identificar errores y anomalías  
+- Validar reglas de negocio
+Ubicación:
+
+```
+/pipelines/REGISTRO_CALIDAD.csv
+```
+---
+
+## 🧩 4. Tablas/Vistas de Agregación (Gold)
+
+Se desarrollaron al menos tres tablas o vistas de agregación en la capa Gold, documentadas en:
+
+```
+/pipelines/LINAJE_DATOS.csv
+```
+
+Estas tablas incluyen:
+
+- Definición de campos  
+- Origen de los datos  
+- Transformaciones aplicadas  
+
+---
+
+## 🧪 5. Pruebas de Calidad de Datos
+
+Se implementaron cinco pruebas de calidad de datos para validar la integridad y consistencia del pipeline.
+
+Ubicación:
+
+```
+/pipelines/PRUEBA_CALIDAD.ipynb
+```
+
+Estas pruebas incluyen:
+
+- Validación de duplicados  
+- Validación de nulos  
+- Validación de integridad referencial  
+- Validación de rangos de fechas  
+- Validación de reglas de negocio  
+
+Cada prueba genera un resultado de:
+
+- ✅ Aprobado  
+- ❌ Fallido  
+
+---
+
+## 📁 Estructura Relacionada
+
+```
+/pipelines
+├── README.ipynb
+├── ingesta_transformacion_log.ipynb
+├── TRANSFORMACION_SILVER.ipynb
+├── TRANSFORMACION_GOLD.ipynb
+├── PRUEBA_CALIDAD.ipynb
+└── LINAJE_DATOS.csv
+
+/docs
+├── tabla de errores bronze.csv
+├── tabla de errores silver.csv
+└── tabla de errores gold.csv
+```
+---
+
+# 🔄 Entregables Fase 4 — Orquestación y Monitoreo
+
+---
+
+## 📦 1. Definición del DAG / Pipeline Principal
+
+Se implementó el pipeline principal de orquestación que coordina la ejecución de las capas:
+
+- Bronze  
+- Silver  
+- Gold  
+
+Ubicación del DAG:
+
+```
+/orchestration/MAESTRO_CAPAS.json
+```
+
+Este DAG define:
+
+- Orden de ejecución de las tareas  
+- Dependencias entre capas  
+- Control del flujo end-to-end del pipeline  
+
+---
+
+## ✅ 2. Evidencia de Ejecución Exitosa
+
+Se adjunta evidencia de la ejecución exitosa del pipeline, donde se puede observar el estado de cada tarea del DAG.
+
+Ubicación:
+
+```
+/docs/DAG EXITOSO.png
+```
+
+---
+
+## ❌ 3. Evidencia de Alerta de Fallo
+
+Se incluye evidencia de una ejecución fallida del pipeline, junto con la notificación recibida.
+
+Ubicación:
+
+```
+/docs/Correo_Falla.jpeg
+```
+
+Esta evidencia demuestra:
+
+- Configuración de alertas  
+- Notificación automática ante fallos  
+- Capacidad de monitoreo del pipeline  
+
+---
+
+## 📩 4. Evidencia de Reporte Diario de Éxito
+
+Se incluye evidencia del reporte automático de ejecución exitosa del pipeline.
+
+Ubicación:
+
+```
+/docs/Resumen_Diario_F.png
+```
+
+Este reporte contiene:
+
+- Estado general del pipeline  
+- Resumen de ejecución  
+- Confirmación de éxito  
+
+---
+
+## 📊 5. Monitoreo y Logs de Ejecución
+
+Se dispone de un registro histórico de ejecuciones del pipeline, permitiendo trazabilidad y análisis de comportamiento.
+
+Ubicación:
+
+```
+/pipelines/log_ejecuciones_pipeline.csv
+```
+
+Este log incluye al menos dos ejecuciones y permite:
+
+- Ver historial de ejecuciones  
+- Identificar fallos y éxitos  
+- Analizar tiempos y estados  
+
+---
+
+## 📁 Estructura Relacionada
+
+```
+/orchestration
+└── MAESTRO_CAPAS.json
+
+/docs
+├── DAG EXITOSO.png
+├── Correo_Falla.jpeg
+└── Resumen_Diario_F.png
+
+/pipelines
+└── log_ejecuciones_pipeline.csv
+```
+
+---
+# 🔐 Entregables Fase 5 — Seguridad, Gobierno y Control
+
+---
+
+## 👥 1. Definición de Roles y Control de Acceso
+
+Se definieron tres roles dentro de la solución con diferentes niveles de acceso:
+
+- **Administrador**
+- **Miembro**
+- **Analista**
+
+📁 Evidencia de configuración:
+
+```
+/docs/ROLES_ACCESO.jpeg
+```
+
+### Roles implementados
+
+- **Administrador (Edison Aguilar)**  
+  - Control total sobre recursos  
+  - Gestión de permisos  
+  - Administración de la plataforma  
+
+- **Miembro (Karol Carranza)**  
+  - Acceso al área de trabajo  
+  - Interacción con recursos del proyecto  
+
+- **Analista (Simulado)**  
+  - Acceso restringido únicamente a capa Gold  
+  - Sin acceso a datos técnicos ni capas intermedias  
+
+⚠️ Nota:  
+El rol de Analista no pudo configurarse completamente debido a limitaciones de acceso a correos requeridos por la plataforma. Sin embargo, su diseño y permisos fueron definidos correctamente.
+
+---
+
+## 🚫 2. Demostración de Acceso Denegado
+
+Se implementó control de acceso a nivel de tabla mediante el rol `analista`, garantizando el principio de **mínimo privilegio**.
+
+### Permisos otorgados (solo capa Gold)
+
+```sql
+GRANT SELECT ON dbo.dim_canal TO analista;
+GRANT SELECT ON dbo.dim_clientes TO analista;
+GRANT SELECT ON dbo.dim_geografia TO analista;
+GRANT SELECT ON dbo.dim_productos TO analista;
+GRANT SELECT ON dbo.fact_cartera TO analista;
+GRANT SELECT ON dbo.fact_rentabilidad_cliente TO analista;
+GRANT SELECT ON dbo.fact_transacciones TO analista;
+GRANT SELECT ON dbo.kpi_diario_cartera TO analista;
+```
+
+### Accesos denegados (tablas técnicas)
+
+```sql
+DENY SELECT ON dbo.pipeline_error_log TO analista;
+DENY SELECT ON dbo.reporte_pruebas_calidad TO analista;
+```
+
+Esto garantiza que el rol Analista:
+
+- ❌ No accede a Bronze  
+- ❌ No accede a Silver  
+- ❌ No accede a logs ni tablas técnicas  
+- ✅ Solo accede a datos de negocio (Gold)  
+
+⚠️ Nota:  
+Debido a limitaciones del SQL Endpoint de Microsoft Fabric, no es posible ejecutar pruebas con múltiples usuarios simultáneamente. Sin embargo, la configuración asegura que en un entorno productivo estos accesos serían correctamente restringidos.
+
+---
+
+---
+
+## 🚨 4. Evidencia de Alertas
+
+Se validó el funcionamiento de tres tipos de alertas:
+
+- Alerta de fallo del pipeline  
+- Reporte diario de ejecución exitosa  
+- Detección de anomalías de volumen  
+
+Estas evidencias se encuentran documentadas en la carpeta:
+
+```
+/docs
+```
+
+---
+
+## 📝 5. Control de Cambios
+
+Se incluye el archivo:
+
+```
+CHANGELOG.md
+```
+
+Este documento contiene:
+
+- Historial de cambios del proyecto  
+- Evolución del pipeline  
+- Mejoras implementadas en cada fase  
+
+---
+
+## 📁 Estructura Relacionada
+
+```
+/docs
+├── ROLES_ACCESO.jpeg
 ```
 
 ---
