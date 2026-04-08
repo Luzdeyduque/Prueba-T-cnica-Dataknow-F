@@ -357,6 +357,7 @@ Ubicación:
 ```
 /docs/Correo_Falla.jpeg
 ```
+![image alt](https://github.com/Luzdeyduque/Prueba-T-cnica-Dataknow-F/blob/fc8d884c26eb98635a100a234855890714841914/docs/Correo_Falla.jpeg)
 
 Esta evidencia demuestra:
 
