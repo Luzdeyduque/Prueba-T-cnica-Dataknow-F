@@ -1,8 +1,20 @@
-# 📊 Proyecto Fase 1 — Pipeline de Datos Financieros
+
+# 📊 Prueba Técnica Dataknow
 
 ## 🏦 Sector y Escenario Seleccionado
 
 **Escenario A — Banca y Servicios Financieros**
+
+Este proyecto desarrolla un pipeline de datos end-to-end enfocado en el sector financiero, abordando problemáticas reales como el procesamiento de transacciones, análisis de cartera y detección de anomalías.
+
+---
+
+## 👩‍💻 Información del Autor
+
+**Nombre:** Luzdey Sthefanny Duque Mantilla  
+**Correo de contacto:** luzdeyduquemantilla@gmail.com  
+
+---
 
 Se seleccionó este sector debido a la alta complejidad y volumen de datos que manejan las entidades financieras, así como la necesidad crítica de procesar información de forma eficiente para la toma de decisiones en áreas como riesgo crediticio y prevención de fraude.
 
@@ -522,3 +534,6 @@ Estas evidencias se encuentran documentadas en la carpeta:
 
 ---
 
+## 🙌 Agradecimiento
+
+Agradezco a los evaluadores por el tiempo dedicado a la revisión de esta prueba técnica.  
